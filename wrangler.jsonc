@@ -3,7 +3,9 @@
   "name": "open-connector",
   "main": "src/server/cloudflare.ts",
   "compatibility_date": "2026-07-02",
-  "compatibility_flags": ["nodejs_compat"],
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
   "cache": {
     "enabled": true
   },
@@ -11,10 +13,21 @@
     "directory": "dist/web",
     "binding": "ASSETS",
     "not_found_handling": "single-page-application",
-    "run_worker_first": ["/api/*", "/v1/*", "/mcp*", "/oauth/*", "/docs", "/docs/*", "/openapi.json", "/health"]
+    "run_worker_first": [
+      "/api/*",
+      "/v1/*",
+      "/mcp*",
+      "/oauth/*",
+      "/docs",
+      "/docs/*",
+      "/openapi.json",
+      "/health"
+    ]
   },
   "triggers": {
-    "crons": ["* * * * *"]
+    "crons": [
+      "* * * * *"
+    ]
   },
   "observability": {
     "enabled": true,
@@ -40,5 +53,11 @@
   ],
   "vars": {
     "OOMOL_CONNECT_ORIGIN": "https://openconnecter.kelvinhkhk.qzz.io"
-  }
+  },
+  "routes": [
+    {
+      "pattern": "openconnecter.kelvinhkhk.qzz.io/*",
+      "zone_id": "8b63fd8a11df1cc3a2d72f5abaae88e9"
+    }
+  ]
 }
