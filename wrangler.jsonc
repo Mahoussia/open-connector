@@ -28,7 +28,7 @@
     {
       "binding": "DB",
       "database_name": "open-connector",
-      "database_id": "PASTE-YOUR-D1-DATABASE-ID-HERE",
+      "database_id": "4e00fb2f-4358-4423-a9c4-7f36597694ac",
       "migrations_dir": "migrations"
     }
   ],
